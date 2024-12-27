@@ -21,7 +21,7 @@ const Navbar = () => {
     return (
         <div className='navContainer'>
             <Link to="/">
-                <p className='navLogo'>CRM Portal</p>
+                <p className='navLogo'>CRM SYSTEM</p>
             </Link>
 
             <input type="checkbox" id='menu-bar' />

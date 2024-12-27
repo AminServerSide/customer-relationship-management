@@ -3,11 +3,14 @@
 body,
 html {
     overflow-x: hidden;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text for readability */
 }
 
 .createCustContainer {
-    background-color: lavender;
+    background-color: #1a1a1a; /* Dark gray for container */
     height: 100%;
+    padding: 20px;
 }
 
 .cpContainer {
@@ -25,8 +28,11 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
+    padding: 50px 0;
     flex-wrap: wrap;
+    background: #1f1f1f; /* Slightly lighter dark for contrast */
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ffcc; /* Neon cyan glow */
 }
 
 .inputContainer {
@@ -37,22 +43,27 @@ html {
     gap: 20px;
     justify-content: center;
     align-items: center;
-
 }
 
 .inputContainer button {
-    width: 100px;
-}
-
-
-
-.star-rating-slider {
-    margin: 5px 0 15px 0;
-}
-
-.star-rating-slider .star-icon {
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    background: #5700ff; /* Neon purple */
+    border-radius: 25px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
     cursor: pointer;
-    margin: 0 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #5700ff, 0 0 20px #5700ff;
+}
+
+.inputContainer button:hover {
+    background: #ff0080; /* Neon pink */
+    box-shadow: 0 0 15px #ff0080, 0 0 30px #ff0080;
 }
 
 .input {
@@ -61,6 +72,30 @@ html {
     width: 90%;
 }
 
+.input input {
+    font-size: 1rem;
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 5px 5px 15px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #00ffcc; /* Neon cyan */
+    background: #1a1a1a; /* Dark background for inputs */
+    color: #ffffff;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input input:focus {
+    border-bottom: 2px solid #ff0080; /* Neon pink focus */
+    box-shadow: 0 2px 10px #ff0080;
+}
+
+.input label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00ffcc; /* Neon cyan for labels */
+}
 
 .createRestContainer .column .input .formInput {
     display: flex;
@@ -69,58 +104,61 @@ html {
     gap: 10px;
 }
 
-.input label {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.inputContainer button {
-    width: 200px;
-    height: 40px;
-    margin-top: 20px;
-    border: none;
-    background: purple;
-    border-radius: 25px;
-    font-size: 18px;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-}
-
-.input input {
-    font-size: 1rem;
-    height: 40px;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 1rem;
-    padding: 5px 5px 5px 15px;
-    outline: 0;
-    border: 0;
-    border-bottom: 1px solid plum;
-    background: white;
-    color: purple;
-}
-
 .createCustContainer .column .input .type {
     text-align: center;
     height: 35px;
-    background: white;
+    background: #2a2a2a;
     border-radius: 5px;
-    color: violet;
+    color: #00ffcc; /* Neon cyan */
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.createCustContainer .column .input .type:hover {
+    background: #5700ff; /* Neon purple */
+    color: #ffffff;
+    box-shadow: 0 0 10px #5700ff, 0 0 20px #5700ff;
 }
 
 .createCustContainer select {
     height: 50px;
     font-size: medium;
     font-family: "Manrope", sans-serif;
+    background: #2a2a2a; /* Dark background for select */
+    color: #ffffff;
+    border: 1px solid #00ffcc; /* Neon border */
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.createCustContainer select:focus {
+    border-color: #ff0080; /* Neon pink focus */
+    box-shadow: 0 0 10px #ff0080;
 }
 
 .createCustContainer option {
     font-size: medium;
     font-family: "Manrope", sans-serif;
+    background: #1a1a1a; /* Dark option background */
+    color: #ffffff;
+}
+
+.star-rating-slider {
+    margin: 5px 0 15px 0;
+}
+
+.star-rating-slider .star-icon {
+    cursor: pointer;
+    margin: 0 5px;
+    color: #ffeb3b; /* Neon yellow for stars */
+    transition: transform 0.3s ease-in-out;
+}
+
+.star-rating-slider .star-icon:hover {
+    transform: scale(1.2);
 }
 
 @media screen and (max-width: 800px) {
@@ -134,8 +172,6 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-
-
     .formContainer {
         width: 90%;
     }
@@ -147,7 +183,5 @@ html {
     .createCustContainer.column {
         width: 100%;
         margin-top: 50px;
-
     }
-
 }

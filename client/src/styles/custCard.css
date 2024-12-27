@@ -3,18 +3,25 @@
 .cust-card {
     width: 40%;
     height: 200px;
-    background-color: lavender;
+    background-color: #1a1a1a; /* Dark background */
     display: flex;
     gap: 100px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ffcc; /* Neon cyan glow */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.cust-card:hover {
+    box-shadow: 0 0 25px #ff0080, 0 0 50px #00ffcc; /* Multicolor glow on hover */
 }
 
 .cust-card .icon {
     font-size: 30px;
-    color: var(--red);
+    color: #ff0000; /* Neon red */
     width: 10%;
     display: flex;
     align-items: center;
@@ -25,7 +32,8 @@
 
 .cust-card .icon:hover {
     transform: translateY(-2px);
-    color: violet;
+    color: #ff0080; /* Neon pink on hover */
+    box-shadow: 0 0 10px #ff0080;
 }
 
 .cust-card .details {
@@ -39,23 +47,11 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-
-
 }
-
-.cust-card .status {
-    padding: 10px 20px;
-    text-align: center;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1.025rem;
-    transition: all 0.3s ease;
-}
-
 
 .cust-card .cust-name h1 {
-    color: purple;
+    color: #00ffcc; /* Neon cyan */
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Glow effect */
 }
 
 .cust-card .cust-details {
@@ -68,4 +64,23 @@
 .cust-card .cust-details p {
     font-size: 1.2rem;
     font-weight: 800;
+    color: #ffffff; /* Light text */
+}
+
+.cust-card .status {
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.025rem;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #5700ff, #00ffcc); /* Neon gradient */
+    box-shadow: 0 0 10px #5700ff, 0 0 20px #00ffcc; /* Neon glow */
+    transition: all 0.3s ease-in-out;
+}
+
+.cust-card .status:hover {
+    background: linear-gradient(90deg, #ff0080, #00ffcc); /* Multicolor glow on hover */
+    box-shadow: 0 0 15px #ff0080, 0 0 30px #00ffcc;
 }

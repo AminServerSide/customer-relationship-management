@@ -8,5 +8,13 @@
     justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
-    
+    padding: 20px; /* Added padding for spacing */
+    background: #1a1a1a; /* Dark background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 20px #00ffcc; /* Neon cyan glow */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.cust-container:hover {
+    box-shadow: 0 0 30px #ff0080, 0 0 60px #00ffcc; /* Multicolor glow on hover */
 }
